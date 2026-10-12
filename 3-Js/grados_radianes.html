@@ -5,6 +5,17 @@
     <title>Conversor de Unidades</title>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
+
+    <script>
+        function cambiar(id, valor){
+            if(id == "grados"){
+                document.getElementById("radianes").value = valor*0.0174;
+            }
+            else if(id == "radianes"){
+                document.getElementById("grados").value = valor*57.29
+            }
+        }
+    </script>
 </head>
 <body class="body-num">
 
@@ -12,10 +23,10 @@
     <h1>Conversor de Unidades</h1>
     <form>
         <p>
-            <label for="grados">Grados</label> = <input id="grados" type="text" name="unid_grados">
+            <label for="grados">Grados</label> = <input id="grados" type="text" name="unid_grados" onchange="cambiar(this.id, this.value)">
         </p>
         <p>
-            <label for="radianes">Radianes</label> = <input id="radianes" type="text" name="unid_radianes">
+            <label for="radianes">Radianes</label> = <input id="radianes" type="text" name="unid_radianes" onchange="cambiar(this.id, this.value)">
         </p>
     </form>
 </div>
