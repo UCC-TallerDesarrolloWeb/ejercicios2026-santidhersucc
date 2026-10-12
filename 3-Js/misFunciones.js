@@ -1,3 +1,6 @@
+/**
+ @method cambiarUnidades
+**/
 function cambiarUnidades(id, valor){
     if(isNaN(valor)){
         alert('Valor invalido');
